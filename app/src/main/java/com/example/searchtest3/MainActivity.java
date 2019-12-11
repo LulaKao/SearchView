@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     ArrayList<String> mSearchList = new ArrayList<>(); // mSearchList 用來儲存所有看板名稱的字串陣列
     boolean mIsSearch = false; // mIsSearch 用來記錄 ListView 是否已載入 Adapter
     SearchView searchView;
-    ImageButton btn_back;
+    Button btn_cancel;
 
 
     @Override
@@ -35,8 +36,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_back = findViewById(R.id.btnBack);
-        btn_back.setOnClickListener(new View.OnClickListener() {
+        btn_cancel = findViewById(R.id.btnCancel);
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"取消搜尋，返回首頁", Toast.LENGTH_SHORT).show();

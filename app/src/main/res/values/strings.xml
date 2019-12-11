@@ -2,4 +2,6 @@
     <string name="app_name">SearchTest3</string>
     <string name="boardSearchHeader">搜尋結果</string>
     <string name="homepage_searchTextView">输入关键词查找片源</string>
+    <string name="search_cancel">取 消</string>
+    <string name="search_textView">亚洲最多标签任君搜选</string>
 </resources>
