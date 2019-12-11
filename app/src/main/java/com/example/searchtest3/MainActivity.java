@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -26,12 +27,21 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     ArrayList<String> mSearchList = new ArrayList<>(); // mSearchList 用來儲存所有看板名稱的字串陣列
     boolean mIsSearch = false; // mIsSearch 用來記錄 ListView 是否已載入 Adapter
     SearchView searchView;
+    ImageButton btn_back;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btn_back = findViewById(R.id.btnBack);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"取消搜尋，返回首頁", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         searchView = findViewById(R.id.searchView);
         searchView.setOnQueryTextListener(this);
@@ -40,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         searchView.requestFocusFromTouch();      //要點選後才會開啟鍵盤輸入
         searchView.setSubmitButtonEnabled(false);//輸入框後是否要加上送出的按鈕
 //        searchView.setQueryHint("輸入看板名稱"); //輸入框沒有值時要顯示的提示文字
-        
+
         mListView = findViewById(R.id.listview);
 
         // 加入 HeaderView
