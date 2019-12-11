@@ -6,6 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!-- 改變 EditText 的顏色（搜尋功能會用到） -->
+        <item name="android:editTextColor">@android:color/white</item>
+        <!-- 改變 queryHint 的顏色（搜尋功能會用到） -->
+        <item name="android:textColorHint">#7C7C7C</item>
     </style>
 
 </resources>

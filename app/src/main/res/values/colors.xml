@@ -2,5 +2,8 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <!-- 改變 cursor 的顏色（搜尋功能會用到） -->
+    <color name="colorAccent">#DEB37F</color>
+    <color name="gray">#7C7C7C</color>
+    <color name="white">#FFFFFF</color>
 </resources>

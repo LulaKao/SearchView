@@ -1,7 +1,6 @@
 package com.example.searchtest3;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -40,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         searchView.setFocusable(false);
         searchView.requestFocusFromTouch();      //要點選後才會開啟鍵盤輸入
         searchView.setSubmitButtonEnabled(false);//輸入框後是否要加上送出的按鈕
-        searchView.setQueryHint("輸入看板名稱"); //輸入框沒有值時要顯示的提示文字
-
+//        searchView.setQueryHint("輸入看板名稱"); //輸入框沒有值時要顯示的提示文字
+        
         mListView = findViewById(R.id.listview);
 
         // 加入 HeaderView
@@ -51,8 +50,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         /*  因為資料是使用陣列，所以可以用 ArrayAdapter 將資料轉為 Adapter
             不用自己再寫一個繼承 BaseAdapter 的類別*/
 
-        // 1. 使用內建的 xml 資源：android.R.layout.simple_list_item_1，列表預設的字體顏色是灰色的
-        mSearchAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mSearchList);
+//        // 1. 使用內建的 xml 資源：android.R.layout.simple_list_item_1，列表預設的字體顏色是灰色的
+//        mSearchAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mSearchList);
 
         /*  2. 修改列表的字體樣式
             列表預設的字體顏色是灰色的，如果想要改成白色的話
@@ -70,8 +69,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 //            }
 //        };
 
-//        // 2.2  將 android.R.layout.simple_list_item_1 改為自己建立的 xml 資源檔
-//        mSearchAdapter = new ArrayAdapter<>(this, R.layout.row_boardsearch , mSearchList);
+        // 2.2  將 android.R.layout.simple_list_item_1 改為自己建立的 xml 資源檔
+        mSearchAdapter = new ArrayAdapter<>(this, R.layout.row_boardsearch , mSearchList);
 
         loadData();
         mListView.setOnItemClickListener(this); // 設定列表的點擊事件

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SearchTest3</string>
     <string name="boardSearchHeader">搜尋結果</string>
+    <string name="homepage_searchTextView">输入关键词查找片源</string>
 </resources>
