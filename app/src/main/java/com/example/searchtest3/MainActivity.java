@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         searchView = findViewById(R.id.searchView);
         searchView.setOnQueryTextListener(this);
         searchView.setIconifiedByDefault(false); //是否要點選搜尋圖示後再打開輸入框
-        searchView.setFocusable(false); // 若不設定為 false，一進入此頁面時，手機的輸入鍵盤會自動開啟
-        searchView.requestFocusFromTouch();      //要點選後才會開啟鍵盤輸入
+        searchView.setFocusable(false); // 獲取鍵盤焦點（true : 一進入此頁面時，手機的輸入鍵盤就會自動開啟）
+        searchView.requestFocusFromTouch();      // 獲取鍵盤焦點
         searchView.setSubmitButtonEnabled(false);//輸入框後是否要加上送出的按鈕
 //        searchView.setQueryHint("輸入看板名稱"); //輸入框沒有值時要顯示的提示文字
 
